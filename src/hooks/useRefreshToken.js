@@ -11,9 +11,9 @@ const useRefreshToken = () => {
     setAuth((prev) => {
       console.log("previous state: ", JSON.stringify(prev));
       console.log("Access Token: ", response?.data?.accessToken);
-      return { ...prev, accesToken: response.data.accessToken };
+      return { ...prev, accessToken: response?.data?.accessToken };
     });
-    return response?.data?.accesToken;
+    return response?.data?.accessToken; //always check spelling for accessToken
   };
   return refresh;
 };
