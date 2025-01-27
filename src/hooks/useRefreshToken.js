@@ -13,7 +13,8 @@ const useRefreshToken = () => {
       console.log("Access Token: ", response?.data?.accessToken);
       return { ...prev, accessToken: response?.data?.accessToken };
     });
-    return response?.data?.accessToken; //always check spelling for accessToken
+    return response?.data?.accessToken;
+    //always check spelling for accessToken
   };
   return refresh;
 };
